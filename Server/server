@@ -1,0 +1,52 @@
+from flask import Flask, request,jsonify
+
+import Util
+app = Flask(__name__)
+
+print(Util.get_location_names())
+@app.route('/get_location_names', methods=['GET'])
+def get_location_names():
+    response = jsonify({
+        'locations': Util.get_location_names()
+    })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
+
+@app.route('/predict_heart_disease', methods=['GET', 'POST'])
+def predict_heart_disease():
+   # location = request.form['location']
+    location=request.form.get("location", Util.get_location_names())
+    age = int(request.form['age'])     #request from call (html inputs)
+    sex = request.form['sex']
+    cp = int(request.form['cp'])
+    trestbps = int(request.form['trestbps'])
+    chol = int(request.form['chol'])
+    fbs = int(request.form['fbs'])
+    restecg = int(request.form['restecg'])
+    thalach = int(request.form['thalach'])
+    exang = int(request.form['exang'])
+    oldpeak = float(request.form['oldpeak'])
+    slope = int(request.form['slope'])
+    ca = int(request.form['ca'])
+    thal = int(request.form['thal'])
+
+   # ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+    #age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
+    #print(location)
+    response = jsonify({
+        'estimated_price': Util.get_estimated_prediction(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal)
+    })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
+
+
+
+
+if __name__ == "__main__":
+
+    print("starting flask server for heart disease")
+    Util.load_save_artifacts()
+    #app.run(debug=True)
+    app.run()
