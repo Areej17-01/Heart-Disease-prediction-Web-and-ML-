@@ -1,13 +1,14 @@
 body {
 
     background-size: cover;
+    background-image: url("675099.jpg");
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
 }
 
 h1 {
     text-align: center;
-    color: darkred;
+    color: floralwhite;
     text-shadow: 2px 2px #000;
 }
 
