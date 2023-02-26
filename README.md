@@ -3,9 +3,6 @@
 
 
 
-
-
-
 #Accuracies for models
 97% of model_knn
 100% of model_random_forest
