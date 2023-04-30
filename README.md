@@ -1,16 +1,28 @@
 # Heart-Disease-prediction-
+-predicts disease when user enter information 
+
+# Dependencies
+
+
+- NumPy
+- Pandas
+- SciPy
+- Matplotlib
+- Scikit-learn
+- pickle
+
+# Accuracies for models:
+
+- 97% of model_knn
+- 100% of model_random_forest
 
 
 
-
-Accuracies for models:
-
-
-97% of model_knn
-100% of model_random_forest
-
-
-
+# Languages 
+- Python 
+- JS
+- CSS
+- HTML
 
 
 
