@@ -1,5 +1,5 @@
 # Heart-Disease-prediction-
-- predicts disease when user enter information 
+- predicts disease when user enters information.
 
 # Dependencies
 
