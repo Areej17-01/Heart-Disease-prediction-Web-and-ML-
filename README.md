@@ -15,7 +15,7 @@
 
 - 97% of model_knn
 - 100% of model_random_forest
-
+- Can find detailed practices of feature engineering to get good accuarcies on https://github.com/Areej17-01/Heart-Disease-prediction-ML-models/tree/main
 
 
 # Languages 
